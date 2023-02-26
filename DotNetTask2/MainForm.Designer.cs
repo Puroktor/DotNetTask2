@@ -34,11 +34,8 @@
             this.pathTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.countButton = new System.Windows.Forms.Button();
-            this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.WordColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.QuantityColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog
@@ -55,7 +52,7 @@
             this.tableLayoutPanel.Controls.Add(this.pathTextBox, 1, 0);
             this.tableLayoutPanel.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel.Controls.Add(this.countButton, 2, 2);
-            this.tableLayoutPanel.Controls.Add(this.dataGridView, 1, 1);
+            this.tableLayoutPanel.Controls.Add(this.label2, 1, 1);
             this.tableLayoutPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel.Name = "tableLayoutPanel";
@@ -114,34 +111,17 @@
             this.countButton.UseVisualStyleBackColor = true;
             this.countButton.Click += new System.EventHandler(this.CountButton_Click);
             // 
-            // dataGridView
+            // label2
             // 
-            this.dataGridView.AllowUserToAddRows = false;
-            this.dataGridView.AllowUserToDeleteRows = false;
-            this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.WordColumn,
-            this.QuantityColumn});
-            this.dataGridView.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView.Location = new System.Drawing.Point(43, 43);
-            this.dataGridView.Name = "dataGridView";
-            this.dataGridView.RowHeadersVisible = false;
-            this.dataGridView.RowTemplate.Height = 25;
-            this.dataGridView.Size = new System.Drawing.Size(674, 364);
-            this.dataGridView.TabIndex = 4;
-            // 
-            // WordColumn
-            // 
-            this.WordColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.WordColumn.HeaderText = "Word";
-            this.WordColumn.Name = "WordColumn";
-            this.WordColumn.ReadOnly = true;
-            // 
-            // QuantityColumn
-            // 
-            this.QuantityColumn.HeaderText = "Quantity";
-            this.QuantityColumn.Name = "QuantityColumn";
-            this.QuantityColumn.ReadOnly = true;
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(185, 200);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(389, 50);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Dictionary will be shown on a separate form\r\nWhy....";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // MainForm
             // 
@@ -154,7 +134,6 @@
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.tableLayoutPanel.ResumeLayout(false);
             this.tableLayoutPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -167,8 +146,6 @@
         private TextBox pathTextBox;
         private Label label1;
         private Button countButton;
-        private DataGridView dataGridView;
-        private DataGridViewTextBoxColumn WordColumn;
-        private DataGridViewTextBoxColumn QuantityColumn;
+        private Label label2;
     }
 }

@@ -27,12 +27,10 @@ namespace DotNetTask2
 				try
 				{
 					var wordQuantityDictionary = WordCounter.CountWordsInFile(pathTextBox.Text);
-					Invoke(() => {
-						dataGridView.Rows.Clear();
-						foreach (var entry in wordQuantityDictionary)					
-							dataGridView.Rows.Add(entry.Key, entry.Value);				
-					});
-				} catch(Exception) {
+					var wordQuantityForm = new WordQuantityForm(wordQuantityDictionary);
+                    wordQuantityForm.ShowDialog();
+
+                } catch(Exception) {
 					MessageBox.Show("File format was invalid!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
 				}
 
